@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="app.css">
+    <title>FTO Report Formatter</title>
+</head>
+<body>
+    <div class="ui container">
+        <div class="ui form">
+            <div class="ui segment">
+                <h2>Basic Information</h2>
+                <h4 class="ui dividing header">Patrol Information</h4>
+                <div class="field">
+                    <label>Date and Phase</label>
+                    <div class="three fields">
+                        <div class="field">
+                            <input type="text" id="date" placeholder="DD/MMM/YYYY">
+                        </div>
+                        <div class="field">
+                            <input type="text" id="time" placeholder="HH:MM">
+                        </div>
+                        <div class="field">
+                            <input type="text" id="phase" placeholder="Phase 2/3">
+                        </div>
+                    </div>
+                </div>
+                <h4 class="ui dividing header">Personnel Information</h4>
+                <div class="field">
+                    <label>Field Training Officer</label>
+                    <div class="three fields">
+                        <div class="field">
+                            <input type="text" id="fto_first" placeholder="First Name">
+                        </div>
+                        <div class="field">
+                            <input type="text" id="fto_last" placeholder="Last Name">
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <label>Trainee</label>
+                    <div class="three fields">
+                        <div class="field">
+                            <input type="text" id="trainee_first" placeholder="First Name">
+                        </div>
+                        <div class="field">
+                            <input type="text" id="trainee_last" placeholder="Last Name">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ui segment">
+                <h2>Etiquette and Professional Standards</h2>
+                <div class="inline fields">
+                    <label for="field1" class="header">Evaluates the way the cadet accepts criticism and feedback:</label>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field1" checked="" value="BS" tabindex="0" class="hidden">
+                            <label>Below Standard</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field1" value="S" tabindex="0" class="hidden">
+                            <label>Standard</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field1" value="AS" tabindex="0" class="hidden">
+                            <label>Above Standard</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field1" value="U" tabindex="0" class="hidden">
+                            <label>Unresponsive</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field1" value="NO" tabindex="0" class="hidden">
+                            <label>Not Observed</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="inline fields">
+                    <label for="field2" class="header">Evaluates how the cadet interacts with the Training Ranger and other members of the community or of the department:</label>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field2" checked="" value="BS" tabindex="0" class="hidden">
+                            <label>Below Standard</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field2" value="S" tabindex="0" class="hidden">
+                            <label>Standard</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field2" value="AS" tabindex="0" class="hidden">
+                            <label>Above Standard</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field2" value="U" tabindex="0" class="hidden">
+                            <label>Unresponsive</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field2" value="NO" tabindex="0" class="hidden">
+                            <label>Not Observed</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="inline fields">
+                    <label for="field3" class="header">Evaluates the Cadet's attitude towards their duties, their motivation, goals and initiative:</label>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field3" checked="" value="BS" tabindex="0" class="hidden">
+                            <label>Below Standard</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field3" value="S" tabindex="0" class="hidden">
+                            <label>Standard</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field3" value="AS" tabindex="0" class="hidden">
+                            <label>Above Standard</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field3" value="U" tabindex="0" class="hidden">
+                            <label>Unresponsive</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field3" value="NO" tabindex="0" class="hidden">
+                            <label>Not Observed</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="inline fields">
+                    <label for="field4" class="header">Evaluates the Cadet's ethical aptitudes and integrity as a Public Servant:</label>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field4" checked="" value="BS" tabindex="0" class="hidden">
+                            <label>Below Standard</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field4" value="S" tabindex="0" class="hidden">
+                            <label>Standard</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field4" value="AS" tabindex="0" class="hidden">
+                            <label>Above Standard</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field4" value="U" tabindex="0" class="hidden">
+                            <label>Unresponsive</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field4" value="NO" tabindex="0" class="hidden">
+                            <label>Not Observed</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="inline fields">
+                    <label for="field5" class="header">Evaluates the Cadet's leadership skills and problem solving capabilities:</label>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field5" checked="" value="BS" tabindex="0" class="hidden">
+                            <label>Below Standard</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field5" value="S" tabindex="0" class="hidden">
+                            <label>Standard</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field5" value="AS" tabindex="0" class="hidden">
+                            <label>Above Standard</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field5" value="U" tabindex="0" class="hidden">
+                            <label>Unresponsive</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field5" value="NO" tabindex="0" class="hidden">
+                            <label>Not Observed</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="inline fields">
+                    <label for="field6" class="header">Evaluates the Cadet's compliance with General Appearance regulations:</label>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field6" checked="" value="BS" tabindex="0" class="hidden">
+                            <label>Below Standard</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field6" value="S" tabindex="0" class="hidden">
+                            <label>Standard</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field6" value="AS" tabindex="0" class="hidden">
+                            <label>Above Standard</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field6" value="U" tabindex="0" class="hidden">
+                            <label>Unresponsive</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field6" value="NO" tabindex="0" class="hidden">
+                            <label>Not Observed</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="inline fields">
+                    <label for="field7" class="header">Evaluates the Cadet's ability to relate and show empathy with members of the public:</label>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field7" checked="" value="BS" tabindex="0" class="hidden">
+                            <label>Below Standard</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field7" value="S" tabindex="0" class="hidden">
+                            <label>Standard</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field7" value="AS" tabindex="0" class="hidden">
+                            <label>Above Standard</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field7" value="U" tabindex="0" class="hidden">
+                            <label>Unresponsive</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field7" value="NO" tabindex="0" class="hidden">
+                            <label>Not Observed</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="inline fields">
+                    <label for="field8" class="header">Evaluates the Cadet's verbal escalation and de-escalation skills:</label>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field8" checked="" value="BS" tabindex="0" class="hidden">
+                            <label>Below Standard</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field8" value="S" tabindex="0" class="hidden">
+                            <label>Standard</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field8" value="AS" tabindex="0" class="hidden">
+                            <label>Above Standard</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field8" value="U" tabindex="0" class="hidden">
+                            <label>Unresponsive</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field8" value="NO" tabindex="0" class="hidden">
+                            <label>Not Observed</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="inline fields">
+                    <label for="field9" class="header">Evaluates the Cadet's confidence when conducting themselves as a Law Enforcement Officer:</label>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field9" checked="" value="BS" tabindex="0" class="hidden">
+                            <label>Below Standard</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field9" value="S" tabindex="0" class="hidden">
+                            <label>Standard</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field9" value="AS" tabindex="0" class="hidden">
+                            <label>Above Standard</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field9" value="U" tabindex="0" class="hidden">
+                            <label>Unresponsive</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field9" value="NO" tabindex="0" class="hidden">
+                            <label>Not Observed</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ui segment">
+                <h2>Practical Competence</h2>
+                <div class="inline fields">
+                    <label for="field10" class="header">Evaluates the Cadet's emergent and non emergent driving skill and adherence to policy and law:</label>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field10" checked="" value="BS" tabindex="0" class="hidden">
+                            <label>Below Standard</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field10" value="S" tabindex="0" class="hidden">
+                            <label>Standard</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field10" value="AS" tabindex="0" class="hidden">
+                            <label>Above Standard</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field10" value="U" tabindex="0" class="hidden">
+                            <label>Unresponsive</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field10" value="NO" tabindex="0" class="hidden">
+                            <label>Not Observed</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="inline fields">
+                    <label for="field11" class="header">Evaluates the Cadet's report writing skills, grammar, spelling and coherence in writing when handling official
+                    departmental paperwork:</label>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field11" checked="" value="BS" tabindex="0" class="hidden">
+                            <label>Below Standard</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field11" value="S" tabindex="0" class="hidden">
+                            <label>Standard</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field11" value="AS" tabindex="0" class="hidden">
+                            <label>Above Standard</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field11" value="U" tabindex="0" class="hidden">
+                            <label>Unresponsive</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field11" value="NO" tabindex="0" class="hidden">
+                            <label>Not Observed</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="inline fields">
+                    <label for="field12" class="header">Evaluates the Cadet's attention to detail and capability of identifying crimes, as well as responding correctly to each
+                    situation by using the right tool or procedure:</label>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field12" checked="" value="BS" tabindex="0" class="hidden">
+                            <label>Below Standard</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field12" value="S" tabindex="0" class="hidden">
+                            <label>Standard</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field12" value="AS" tabindex="0" class="hidden">
+                            <label>Above Standard</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field12" value="U" tabindex="0" class="hidden">
+                            <label>Unresponsive</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field12" value="NO" tabindex="0" class="hidden">
+                            <label>Not Observed</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="inline fields">
+                    <label for="field13" class="header">Evaluates the Cadet's physical escalation and de-escalation skills and adherence to the force continuum:</label>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field13" checked="" value="BS" tabindex="0" class="hidden">
+                            <label>Below Standard</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field13" value="S" tabindex="0" class="hidden">
+                            <label>Standard</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field13" value="AS" tabindex="0" class="hidden">
+                            <label>Above Standard</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field13" value="U" tabindex="0" class="hidden">
+                            <label>Unresponsive</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field13" value="NO" tabindex="0" class="hidden">
+                            <label>Not Observed</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="inline fields">
+                    <label for="field14" class="header">Evaluates the Cadet's performance, response time and resilience to stress under general conditions:</label>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field14" checked="" value="BS" tabindex="0" class="hidden">
+                            <label>Below Standard</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field14" value="S" tabindex="0" class="hidden">
+                            <label>Standard</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field14" value="AS" tabindex="0" class="hidden">
+                            <label>Above Standard</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field14" value="U" tabindex="0" class="hidden">
+                            <label>Unresponsive</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field14" value="NO" tabindex="0" class="hidden">
+                            <label>Not Observed</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="inline fields">
+                    <label for="field15" class="header">Evaluates the Cadet's situational awareness and officer safety, performing tasks while maximizing safety to self and
+                    others:</label>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field15" checked="" value="BS" tabindex="0" class="hidden">
+                            <label>Below Standard</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field15" value="S" tabindex="0" class="hidden">
+                            <label>Standard</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field15" value="AS" tabindex="0" class="hidden">
+                            <label>Above Standard</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field15" value="U" tabindex="0" class="hidden">
+                            <label>Unresponsive</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field15" value="NO" tabindex="0" class="hidden">
+                            <label>Not Observed</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="inline fields">
+                    <label for="field16" class="header">Evaluates the Cadet's radio communications and effectiveness in relaying accurate, timely information:</label>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field16" checked="" value="BS" tabindex="0" class="hidden">
+                            <label>Below Standard</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field16" value="S" tabindex="0" class="hidden">
+                            <label>Standard</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field16" value="AS" tabindex="0" class="hidden">
+                            <label>Above Standard</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field16" value="U" tabindex="0" class="hidden">
+                            <label>Unresponsive</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field16" value="NO" tabindex="0" class="hidden">
+                            <label>Not Observed</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ui segment">
+                <h2>Theoretical Competence</h2>
+                <div class="inline fields">
+                    <label for="field17" class="header">Evaluates the Cadet's usage of the Mobile Data Terminal (MDT) and relevant Law Enforcement Portals:</label>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field17" checked="" value="BS" tabindex="0" class="hidden">
+                            <label>Below Standard</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field17" value="S" tabindex="0" class="hidden">
+                            <label>Standard</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field17" value="AS" tabindex="0" class="hidden">
+                            <label>Above Standard</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field17" value="U" tabindex="0" class="hidden">
+                            <label>Unresponsive</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field17" value="NO" tabindex="0" class="hidden">
+                            <label>Not Observed</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="inline fields">
+                    <label for="field18" class="header">Evaluates the Cadet's knowledge of geography and their surroundings, as well as their ability to find locations and
+                    respond to them in a timely, acceptable time frame:</label>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field18" checked="" value="BS" tabindex="0" class="hidden">
+                            <label>Below Standard</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field18" value="S" tabindex="0" class="hidden">
+                            <label>Standard</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field18" value="AS" tabindex="0" class="hidden">
+                            <label>Above Standard</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field18" value="U" tabindex="0" class="hidden">
+                            <label>Unresponsive</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field18" value="NO" tabindex="0" class="hidden">
+                            <label>Not Observed</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="inline fields">
+                    <label for="field19" class="header">Evaluates the Cadet's knowledge in internal policy and procedure:</label>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field19" checked="" value="BS" tabindex="0" class="hidden">
+                            <label>Below Standard</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field19" value="S" tabindex="0" class="hidden">
+                            <label>Standard</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field19" value="AS" tabindex="0" class="hidden">
+                            <label>Above Standard</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field19" value="U" tabindex="0" class="hidden">
+                            <label>Unresponsive</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field19" value="NO" tabindex="0" class="hidden">
+                            <label>Not Observed</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="inline fields">
+                    <label for="field20" class="header">Evaluates the Cadet's knowledge of criminal law, penal code, WACA and other legislature relevant to departmental duties:</label>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field20" checked="" value="BS" tabindex="0" class="hidden">
+                            <label>Below Standard</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field20" value="S" tabindex="0" class="hidden">
+                            <label>Standard</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field20" value="AS" tabindex="0" class="hidden">
+                            <label>Above Standard</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field20" value="U" tabindex="0" class="hidden">
+                            <label>Unresponsive</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field20" value="NO" tabindex="0" class="hidden">
+                            <label>Not Observed</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="inline fields">
+                    <label for="field21" class="header">Evaluates the Cadet's competency when handling a suspect, arrest procedures, first, second, fourth, fifth amendments and
+                    warrant requirements:</label>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field21" checked="" value="BS" tabindex="0" class="hidden">
+                            <label>Below Standard</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field21" value="S" tabindex="0" class="hidden">
+                            <label>Standard</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field21" value="AS" tabindex="0" class="hidden">
+                            <label>Above Standard</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field21" value="U" tabindex="0" class="hidden">
+                            <label>Unresponsive</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field21" value="NO" tabindex="0" class="hidden">
+                            <label>Not Observed</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ui segment">
+                <h2>Out of Character Competence</h2>
+                <div class="inline fields">
+                    <label for="field22" class="header">Evaluates the Cadet's roleplay standards and character portrayal:</label>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field22" checked="" value="BS" tabindex="0" class="hidden">
+                            <label>Below Standard</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field22" value="S" tabindex="0" class="hidden">
+                            <label>Standard</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field22" value="AS" tabindex="0" class="hidden">
+                            <label>Above Standard</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field22" value="U" tabindex="0" class="hidden">
+                            <label>Unresponsive</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field22" value="NO" tabindex="0" class="hidden">
+                            <label>Not Observed</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="inline fields">
+                    <label for="field23" class="header">Evaluates the Cadet's demeanor, acceptance of criticism and feedback:</label>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field23" checked="" value="BS" tabindex="0" class="hidden">
+                            <label>Below Standard</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field23" value="S" tabindex="0" class="hidden">
+                            <label>Standard</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field23" value="AS" tabindex="0" class="hidden">
+                            <label>Above Standard</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field23" value="U" tabindex="0" class="hidden">
+                            <label>Unresponsive</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="field23" value="NO" tabindex="0" class="hidden">
+                            <label>Not Observed</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ui segment">
+                <h2>Narrative</h2>
+                <div class="field">
+                    <label>Material Covered</label>
+                    <textarea id="material" placeholder="Text here, include the information taught to the student."></textarea>
+                </div>
+                <div class="field">
+                    <label>Performance Insight</label>
+                    <textarea id="performance" placeholder="Text here, explain the least and most satisfactory assessment of Field Training Student."></textarea>
+                </div>
+                <div class="field">
+                    <label>Narrative</label>
+                    <textarea id="narrative" placeholder="Text here, include any reports made by the Field Training Student."></textarea>
+                </div>
+                <div class="field">
+                    <label>(( Roleplay Ability ))</label>
+                    <textarea id="roleplay" placeholder="Text here, write about the Cadet's roleplay and portrayal throughout the patrol."></textarea>
+                </div>
+            </div>
+            <div class="ui segment">
+                <h2>Generator</h2>
+            <div class="field">
+                <label>Output</label>
+                <textarea id="output" readonly></textarea>
+            </div>
+            <div class="ui secondary button" id="submit">Submit</div>
+            <div class="ui primary button" id="copy">Copy to Clipboard</div>
+        </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js" integrity="sha512-dqw6X88iGgZlTsONxZK9ePmJEFrmHwpuMrsUChjAw1mRUhUITE5QU9pkcSox+ynfLhL15Sv2al5A0LVyDCmtUw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="app.js"></script>
+</body>
+</html>
