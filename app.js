@@ -17,7 +17,7 @@ $('#submit').click(function () {
 
 [size=110][b]ASSESSMENT:[/b][/size]
 
-[aligntable=left,0,0,20,0,0,0][b]I[/b] - Insufficient[/aligntable][aligntable=left,0,0,20,0,0,0][b]S[/b] - Standard[/aligntable][aligntable=left,0,0,20,0,0,0][b]E[/b] - Excellent[/aligntable][aligntable=left,0,0,20,0,0,0][b]N/O[/b] - Not Observed[/aligntable][aligntable=left,0,0,20,0,0,0][b]U[/b] - Unresponsive[/aligntable]
+[aligntable=left,0,0,20,0,0,0][b]BS[/b] - Below Standard[/aligntable][aligntable=left,0,0,20,0,0,0][b]S[/b] - Standard[/aligntable][aligntable=left,0,0,20,0,0,0][b]AS[/b] - Above Standard[/aligntable][aligntable=left,0,0,20,0,0,0][b]N/O[/b] - Not Observed[/aligntable][aligntable=left,0,0,20,0,0,0][b]U[/b] - Unresponsive[/aligntable]
 
 [hr]
 [center][size=120][list=none]1. [b]Etiquette and Professional Standards[/b][/list][/size][hr][/hr][/center]
